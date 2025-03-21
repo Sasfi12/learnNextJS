@@ -1,8 +1,13 @@
-export default function Random({count , makeitPlusOne}) {
+import "./Random.css"
+export default function Random({count , makePlusOne , makeMinusOne , reset}) {
     return (
-        <div>
+        <div className="counter">
             <h2>Your number... {count}</h2>
-            <button onClick={() => makeitPlusOne()}>This is a button</button>
+            <div className="buttons">
+                <button onClick={() => makePlusOne()}>increment</button>
+                <button onClick={() => makeMinusOne()}>decrement</button>
+                <button onClick={() => reset()}>reset</button>
+            </div>
         </div>
         )
 }

@@ -12,11 +12,19 @@ export default function Home() {
         )
     }
     const increment = () => {
-        setNumber( number + 1 )
+        setNumber( number + 1 ) ;
+    }
+
+    const decrement = () => {
+        setNumber( number - 1 ) ;
+    }
+
+    const reset = () => {
+        setNumber( 0 ) ;
     }
     return (
         <div>
-            <Random count={number} makeitPlusOne={increment}/>
+            <Random count={number} makePlusOne={increment} makeMinusOne={decrement} reset={reset}/>
         </div>
     )
 }
