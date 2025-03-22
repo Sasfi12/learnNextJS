@@ -1,10 +1,9 @@
 "use client"; 
 import { useEffect, useState } from "react"
 import Counter from "./components/Counter";
-import { useAppSelector } from "@/lib/hooks";
 export default function Home() {
     const [isLoaded , setIsLoaded] = useState(false); 
-    const counter = useAppSelector(state => state.counter.count)
+    
     useEffect(() => setIsLoaded(true) , [])
     if(!isLoaded) {
         return (
@@ -14,7 +13,7 @@ export default function Home() {
     
     return (
         <div>
-            <Counter count={counter}/>
+            <Counter/>
         </div>
     )
 }
