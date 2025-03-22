@@ -1,5 +1,6 @@
 "use client"; 
 import { useEffect, useState } from "react"
+import Link from "next/link";
 import Counter from "./components/Counter";
 export default function Home() {
     const [isLoaded , setIsLoaded] = useState(false); 
@@ -13,6 +14,7 @@ export default function Home() {
     
     return (
         <div>
+            <Link href={"../"}>go back</Link>
             <Counter/>
         </div>
     )
