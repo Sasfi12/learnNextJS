@@ -1,14 +1,20 @@
 .counter {
     display: flex;
     flex-direction: column;
-    
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     h2 {
+        padding: 2rem;
         background-color: rebeccapurple;
         text-align: center;
+        font-size: 2rem
     }
     .buttons {
+        margin-top: 2rem;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 2rem;
@@ -16,9 +22,18 @@
             padding: 10px;
             align-self: center; 
             border: solid;
-            display: flex;
             align-items: center;
             justify-content: center;
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover {
+                background-color: aliceblue;
+                color: black;
+            }
+            &:active {
+                background-color: yellow;
+                transition: 0s;
+            }
         }
      }
 }

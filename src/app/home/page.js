@@ -1,30 +1,20 @@
 "use client"; 
 import { useEffect, useState } from "react"
-import Random from "./components/Random";
-
+import Counter from "./components/Counter";
+import { useAppSelector } from "@/lib/hooks";
 export default function Home() {
     const [isLoaded , setIsLoaded] = useState(false); 
-    const [number , setNumber] = useState(0)
+    const counter = useAppSelector(state => state.counter.count)
     useEffect(() => setIsLoaded(true) , [])
     if(!isLoaded) {
         return (
             <h1>Loading...</h1>
         )
     }
-    const increment = () => {
-        setNumber( number + 1 ) ;
-    }
-
-    const decrement = () => {
-        setNumber( number - 1 ) ;
-    }
-
-    const reset = () => {
-        setNumber( 0 ) ;
-    }
+    
     return (
         <div>
-            <Random count={number} makePlusOne={increment} makeMinusOne={decrement} reset={reset}/>
+            <Counter count={counter}/>
         </div>
     )
 }

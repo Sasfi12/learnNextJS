@@ -1,9 +1,9 @@
-import Image from "next/image";
-
+import Link from "next/link";
+import "./main.css"
 export default function Home() {
   return (
-    <div>
-       
-    </div>
+    <Link href={"/home"} className="nav">
+      Home
+    </Link>
   );
 }
