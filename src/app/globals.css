@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.anime-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  div {
+    margin: 10px;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      text-align: center;
+    }
+    img {
+      height: 300px;
+      width: 300px;
+    }
+  }
+}
+
+.loading {
+  font-size: 5rem;
+}
