@@ -12,19 +12,18 @@ export default function Products() {
     } , [])
     console.log(data)
     if(loading) {
-        return <h1 className="loading">Loading...</h1>
+        return <h1 className="loading">Loading products...</h1>
     }
     if(error) {
         return <h1>{error}</h1>
     }
-    if(data) {
     return (
     <div>
         <h1>
             Browse our products 
         </h1>
         <div className="anime-cards">
-        { data ? 
+        { data &&
             
                data.map((e , key) => {
                 return (
@@ -34,12 +33,8 @@ export default function Products() {
                    </div>
                     )
                })
-            
-            : 
-            <h1 className="loading">Loading...</h1>
         }
         </div>
     </div>
     )
-    }
 } 
