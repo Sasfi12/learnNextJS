@@ -24,15 +24,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
+nav { 
+  display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+  align-items: center; 
+  font-size: xx-large;
+  cursor: pointer;   
+  gap: 2rem;
+  .nav{
+    font-size: 2rem;
+  }
+}
 .anime-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   div {
+
     margin: 10px;
     width: 400px;
-    height: 300px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;

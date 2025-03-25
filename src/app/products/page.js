@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react"
 import axios from "axios"
+import Link from "next/link";
 export default function Products() {
     const [data , setData] = useState(null);
     const [error , setError] = useState(null)
@@ -30,6 +31,7 @@ export default function Products() {
                     <div key={key}>
                    <h2>{e.title_japanese}</h2>
                    <img src={e.images.webp.image_url}/>
+                   <Link href={`products/${e.mal_id.toString()}`}>See more</Link>
                    </div>
                     )
                })

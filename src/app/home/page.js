@@ -14,7 +14,6 @@ export default function Home() {
     
     return (
         <div>
-            <Link href={"../"}>go back</Link>
             <Counter/>
         </div>
     )
